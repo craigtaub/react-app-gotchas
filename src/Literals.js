@@ -10,7 +10,6 @@ class Literals extends Component {
       tree: true
     };
     this.toggleState = this.toggleState.bind(this);
-    this.thing = () => '';
   }
 
   toggleState() {
