@@ -1,8 +1,10 @@
 # React app gotchas
 
+Gotcha:
 - Function binding.
 - Array/Object literals
+- Fallbacks
 
-Swap test. `index.js` and `shouldComponentUpdate`'s.
+To swap tests see `index.js` and `shouldComponentUpdate`'s.
 
-https://blog.vixlet.com/react-at-light-speed-78cd172a6411#.svdmr79bf
+Inspired by: https://blog.vixlet.com/react-at-light-speed-78cd172a6411#.svdmr79bf
