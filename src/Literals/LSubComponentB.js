@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 
-class SubComponentB extends Component {
+class LSubComponentB extends Component {
   shouldComponentUpdate(nextProps) {
-    // return nextProps.clickProp !== this.props.clickProp; // FunctionBinding
     return nextProps.style !== this.props.style; // Literals
   }
 
   render() {
-    console.log('render B');
+    console.log('L render B');
     return (
       <div>
-        sub compoB
+        L sub compoB
       </div>
     )
   }
 }
 
-export default SubComponentB;
+export default LSubComponentB;

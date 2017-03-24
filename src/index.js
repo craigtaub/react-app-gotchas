@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import NewApp from './FunctionBinding';
-import NewApp from './Literals';
+import App from './App';
 import './index.css';
 
 
 ReactDOM.render(
-  <NewApp />,
+  <App />,
   document.getElementById('root')
 );

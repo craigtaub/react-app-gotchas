@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import SubComponentA from './SubComponentA';
-import SubComponentB from './SubComponentB';
+import FSubComponentA from './FSubComponentA';
+import FSubComponentB from './FSubComponentB';
 
 class FunctionBinding extends Component {
 
   constructor() {
     super();
     this.state = {
-      tree: true
+      value: true
     };
     this.toggleState = this.toggleState.bind(this);
     this.doSomethingTwo = this.doSomethingTwo.bind( this );
@@ -23,7 +23,7 @@ class FunctionBinding extends Component {
 
   toggleState() {
     this.setState({
-      tree: !this.state.tree
+      value: !this.state.value
     });
   }
 
@@ -35,13 +35,14 @@ class FunctionBinding extends Component {
     INSTEAD: handle function binding in the constructor and pass the already bound function as the prop value
   */
   render() {
-    console.log('NewApp render');
+    console.log('FunctionBinding render');
     return (
       <div className="App">
-        hello: { (this.state.tree) ? 'true' : 'false' } <br/>
-        <a onClick={ this.toggleState }>Toggle</a>
-        <SubComponentA clickProp={ () => this.doSomething() }>Bad</SubComponentA>
-        <SubComponentB clickProp={ this.doSomethingTwo }>Good</SubComponentB>
+        <h1>FunctionBinding</h1>
+        Value: { (this.state.value) ? 'true' : 'false' }  <br/>
+        <b><a onClick={ this.toggleState }>Toggle state</a></b>
+        <FSubComponentA clickProp={ () => this.doSomething() }>Bad</FSubComponentA>
+        <FSubComponentB clickProp={ this.doSomethingTwo }>Good</FSubComponentB>
       </div>
     );
   }
