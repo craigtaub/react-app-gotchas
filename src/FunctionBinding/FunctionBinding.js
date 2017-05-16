@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FSubComponentA from './FSubComponentA';
 import FSubComponentB from './FSubComponentB';
+import FSubComponentC from './FSubComponentC';
 
 class FunctionBinding extends Component {
 
@@ -20,7 +21,9 @@ class FunctionBinding extends Component {
   doSomethingTwo() {
     console.log('ran doSomethingTwo');
   }
-
+  doSomethingThree() {
+    console.log('ran doSomethingTwo');
+  }
   toggleState() {
     this.setState({
       value: !this.state.value
@@ -43,6 +46,7 @@ class FunctionBinding extends Component {
         <b><a onClick={ this.toggleState }>Toggle state</a></b>
         <FSubComponentA clickProp={ () => this.doSomething() }>Bad</FSubComponentA>
         <FSubComponentB clickProp={ this.doSomethingTwo }>Good</FSubComponentB>
+        <FSubComponentC clickProp={ this.doSomethingThree.bind(this) }>Bad</FSubComponentC>
       </div>
     );
   }

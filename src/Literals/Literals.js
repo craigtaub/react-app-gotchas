@@ -31,11 +31,10 @@ class Literals extends Component {
     // this.style = { backgroundColor: 'red' }; // BAD: RE-RENDER EVERYTIME ASWELL..same issue. Literal.
 
     //LSubComponentC with style={ { backgroundColor: 'red' } } will re-render each time too. PureComponent wont save.
-  
+
     return (
       <div className="App">
         <h1>Literals</h1>
-        Value: { (this.state.value) ? 'true' : 'false' } <br/>
         <b><a onClick={ this.toggleState }>Toggle state</a></b>
         <LSubComponentA style={ { backgroundColor: 'red' } }>Bad</LSubComponentA>
         <LSubComponentB style={ this.style }>Good B</LSubComponentB>
